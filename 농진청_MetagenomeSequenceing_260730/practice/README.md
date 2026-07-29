@@ -10,7 +10,7 @@
 > **참고:** `quay.io/qiime2/qiime2:2026.4` 이미지는 시스템 관리자에 의해 사전 설치가 완료되어 있습니다.  
 > (개인 환경 구축 시: `docker pull quay.io/qiime2/qiime2:2026.4`)
 
-## 사용자 단축 명령어 설정
+### 사용자 단축 명령어 설정
 매번 길고 복잡한 Docker 실행 명령어를 입력하지 않도록 `~/.bashrc`에 단축 함수를 등록합니다.
 
 1. `~/.bashrc` 파일을 엽니다.
@@ -39,7 +39,7 @@
    qiime-docker --version
 
 
-## 실습 데이터 다운로드
+## 2. 실습 데이터 다운로드
 분석 실습에 필요한 메타데이터(sample-metadata.tsv) 및 시퀀싱 데이터(demux.qza)를 다운로드합니다. 터미널에서 아래 명령어를 실행하세요.
    ```bash
    # 메타데이터 다운로드
@@ -48,3 +48,5 @@
 # QIIME2 FORMAT(.qza) 서열데이터 다운로드
    wget -O 'demux.qza' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/demux.qza'
 
+
+## 3. 
