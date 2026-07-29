@@ -18,6 +18,7 @@
    vi ~/.bashrc
 
 2. 파일(~/.bashrc) 하단에 아래 코드 추가
+```bash
 qiime-docker() {
     docker run --rm \
         --user $(id -u):$(id -g) \
@@ -29,10 +30,10 @@ qiime-docker() {
         qiime "$@"
 }
 
-3. 변경 사항을 즉시 적용합니다.
+4. 변경 사항을 즉시 적용합니다.
 source ~/.bashrc
 
-4. 등록 확인 (버전 출력 테스트)
+5. 등록 확인 (버전 출력 테스트)
 qiime-docker --version
 
 
