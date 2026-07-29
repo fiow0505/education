@@ -45,8 +45,8 @@
    # 메타데이터 다운로드
    wget -O 'sample-metadata.tsv' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/sample-metadata.tsv'
 
-# QIIME2 FORMAT(.qza) 서열데이터 다운로드
+   # QIIME2 FORMAT(.qza) 서열데이터 다운로드
    wget -O 'demux.qza' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/demux.qza'
+   ```
 
-
-## 3. 
+## 3. 실습 명령어
