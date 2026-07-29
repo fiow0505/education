@@ -18,30 +18,33 @@
    vi ~/.bashrc
 
 2. 파일(~/.bashrc) 하단에 아래 코드 추가
-```bash
-qiime-docker() {
-    docker run --rm \
-        --user $(id -u):$(id -g) \
-        -e HOME=/tmp \
-        -e MPLCONFIGDIR=/tmp/matplotlib \
-        -v "$PWD":/data \
-        -w /data \
-        -ti quay.io/qiime2/qiime2:2026.4 \
-        qiime "$@"
-}
+   ```bash
+   qiime-docker() {
+       docker run --rm \
+           --user $(id -u):$(id -g) \
+           -e HOME=/tmp \
+           -e MPLCONFIGDIR=/tmp/matplotlib \
+           -v "$PWD":/data \
+           -w /data \
+           -ti quay.io/qiime2/qiime2:2026.4 \
+           qiime "$@"
+   }
 
 4. 변경 사항을 즉시 적용합니다.
-source ~/.bashrc
+   ```bash
+   source ~/.bashrc
 
-5. 등록 확인 (버전 출력 테스트)
-qiime-docker --version
+6. 등록 확인 (버전 출력 테스트)
+   ```bash
+   qiime-docker --version
 
 
 ## 실습 데이터 다운로드
 분석 실습에 필요한 메타데이터(sample-metadata.tsv) 및 시퀀싱 데이터(demux.qza)를 다운로드합니다. 터미널에서 아래 명령어를 실행하세요.
+   ```bash
+   # 메타데이터 다운로드
+   wget -O 'sample-metadata.tsv' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/sample-metadata.tsv'
 
-# 메타데이터 다운로드
-wget -O 'sample-metadata.tsv' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/sample-metadata.tsv'
-
-# QIIME2 FORMAT(.qza) 서열데이터 다운로드
-wget -O 'demux.qza' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/demux.qza'
+   # QIIME2 FORMAT(.qza) 서열데이터 다운로드
+   ```bash
+   wget -O 'demux.qza' 'https://gut-to-soil-tutorial.readthedocs.io/en/2026.4/data/gut-to-soil/demux.qza'
