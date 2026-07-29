@@ -17,7 +17,7 @@
    ```bash
    vi ~/.bashrc
 
-2. 파일(~/.bashrc) 하단에 아래 코드 추가
+2. 파일(`~/.bashrc`) 하단에 아래 코드 추가
    ```bash
    qiime-docker() {
        docker run --rm \
